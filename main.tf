@@ -8,3 +8,12 @@ resource "aws_ebs_volume" "v" {
     owner = "Mike"
   }
 }
+
+resource "aws_ebs_volume" "v2" {
+  availability_zone = "us-west-2a"
+  size = 8
+
+  tags = {
+    owner = "Mike"
+  }
+}
