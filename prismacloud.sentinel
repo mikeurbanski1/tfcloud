@@ -8,6 +8,7 @@ loginReq = http.request("https://api0.prismacloud.io/login").with_body(json.mars
 loginResp = json.unmarshal(http.post(loginReq).body)
 req = http.request("https://api0.prismacloud.io/bridgecrew/api/v1/tfCloud/sentinel/ws-ZQgib3tM8cjJk8gY").with_header("Authorization", loginResp.token)
 resp = json.unmarshal(http.get(req).body)
+print(resp)
 if (length(resp.violations) > 0) {
     print("Violations:\n")
     for resp.violations as violation {
