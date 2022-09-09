@@ -1,4 +1,4 @@
 policy "prismacloud" {
-        source            = "{PATH_TO_FILE}"
+        source            = "bridgecrew.sentinel"
         enforcement_level = "hard-mandatory"
 }
