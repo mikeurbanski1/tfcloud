@@ -4,6 +4,8 @@ import "json"
 param BC_API_KEY
 param BC_API_URL
 
+print("API URL: " + BC_API_URL)
+
 req = http.request(BC_API_URL + "/api/v1/tfCloud/sentinel/ws-ZQgib3tM8cjJk8gY").with_header("Authorization", BC_API_KEY)
 resp = json.unmarshal(http.get(req).body)
 if (length(resp.violations) > 0) {
